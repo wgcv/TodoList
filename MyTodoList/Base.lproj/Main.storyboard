@@ -1,25 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribir tarea" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L4E-Z1-n4c">
+                                <rect key="frame" x="20" y="21" width="496" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f4-y3-8Mx">
+                                <rect key="frame" x="524" y="20" width="56" height="30"/>
+                                <state key="normal" title="Guardar"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NKQ-92-rEg">
+                                <rect key="frame" x="20" y="59" width="560" height="521"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="NKQ-92-rEg" secondAttribute="trailing" id="4mi-eM-mG7"/>
+                            <constraint firstItem="NKQ-92-rEg" firstAttribute="top" secondItem="L4E-Z1-n4c" secondAttribute="bottom" constant="8" id="7b2-n5-Aes"/>
+                            <constraint firstItem="9f4-y3-8Mx" firstAttribute="leading" secondItem="L4E-Z1-n4c" secondAttribute="trailing" constant="8" id="B4F-vf-Bey"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9f4-y3-8Mx" secondAttribute="trailing" id="GH7-je-N0t"/>
+                            <constraint firstItem="9f4-y3-8Mx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GUp-gL-84F"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="L4E-Z1-n4c" secondAttribute="leading" id="T1d-C4-eok"/>
+                            <constraint firstItem="L4E-Z1-n4c" firstAttribute="baseline" secondItem="9f4-y3-8Mx" secondAttribute="baseline" id="obt-b3-kKq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NKQ-92-rEg" secondAttribute="leading" id="qew-bj-Zoh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NKQ-92-rEg" secondAttribute="bottom" constant="20" id="w8c-97-nTW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="277"/>
         </scene>
     </scenes>
 </document>
